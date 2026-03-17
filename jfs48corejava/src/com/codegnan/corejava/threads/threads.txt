@@ -1,0 +1,71 @@
+Thread 
+
+- A thread is an executional path or sequnce in the program. 
+
+
+Where does a thread exist ?
+
+- When we switch on the computer, a special program called
+  OS or operating system is loaded from hard disk to memory(RAM)
+  
+ - This OS will help us interact with the hardware and the CPU.
+ 
+ - When you try to use any application in your computer, 
+   the OS will take that application program from the disk and creates
+   an instance of that application in the memory. 
+   
+- This instance is called a process, 
+  process is also known as "Context" of the application. 
+  
+- Each process is separated from other processes 
+  that run on the system. 
+  
+- A process contains metadata which will have the following: 
+   - Process ID or PID
+   - files which the application uses for reading and writing of data.
+   - code or the program instructions which are going to be
+      executed on the CPU
+   - heap which contains the data needed for our application.
+   
+   - main thread : a thread will have its own stack and instruction
+     pointer. 
+      - stack: A region in the memory where our local variables or
+         object references and methods are executed. 
+         
+      - instruction pointer: It s a pointer which points to 
+        the address of the next instruction which the thread
+        is going to execute.
+        
+        
+ Process vs Threads:
+ 
+ Memory:
+  - Process has its own memory
+  - Threads will share the memory with other threads in the process
+  
+ Weight: 
+  Process is heavy weight as it takes more time to start and stop and 
+  consumes more resources like memory.
+  Switching from one process to another process is not fast.(Inter
+  process communication or context switching)
+  
+  Thread is Light weight, takes less time to start and stop.
+  Switching from one thread to another thread is faster. (Inter
+  thread communication)
+  
+  
+  Thread class: 
+  =============
+ 
+  
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
