@@ -38,6 +38,7 @@ Where does a thread exist ?
         
         
  Process vs Threads:
+ ===================
  
  Memory:
   - Process has its own memory
@@ -56,6 +57,135 @@ Where does a thread exist ?
   
   Thread class: 
   =============
+  Thread class is present in java.lang
+  
+  A Thread can be created in 2 different ways: 
+  1. Extendiong the Thread class
+  2. Implemening Runnable interface. 
+  
+  Thread has a method run(): 
+  - It contains actual logic that the thread will executed.
+  - We must not call run() directly, 
+  - we must call start() and JVM internally calls run(() of the thread
+  
+  start(): 
+  It is used to start a thread. 
+  It creates a call stack. 
+  It calls run() internally
+  Executes concurrently with other threads. 
+  
+  we call start() method only once per thread
+  YOu will get IllegalThreadException if you repeatedly call thread
+   more than once. 
+   
+  slee0(milliseconds):
+  Pauses the execution of the current thread for specified time. 
+  Thread goes into a state called TIMED_WAITING state
+  It will hold the lock. 
+  after the time thread becomes runnable again. 
+  
+  
+  Interrupted Exception: 
+  It indicates that the thread was interrupted while sleeping or
+  waiting. 
+  During sleep() when another thread calls thread.interrupt().
+  
+  Thread creation using Runnable interface: 
+  ============================================
+  - Runnable interface is a interface which contains a single abstract
+    method - run(). 
+  - It is a functional interface because it has a single abstract method. 
+  To create a thread using Runnable interrface:
+   1. Create a class which implements Runnable interrace
+   2. Override run() method
+   3. To use this thread, 
+      Create a Thread object.   
+      Pass Runnable object to Thread. 
+      call start()
+      
+ Synchronized: 
+      Synchronized keyword is used to control access to code by multiple threads.
+  - It makes sure that only one thread at a timecan execute the synchronized code
+  on the same objects monitor lock.
+  It prevents inconsistent data or race coditions when multiple threads
+  try to modifiy shared resources.
+  
+  Avoiding the Race condition using synchronized keyword:
+  ------------------------------------------------------
+  
+  - when a thread enters a synchronized method/block,
+  it acquires the lock(monitor) of the object
+  other threads trying to execute any synchornized method on the same object
+  must wait until the lock is released.
+  
+  When synchornized section is executed, no other thread can
+  interrupt in the middle.
+  
+  Before releasing the lock, changes made by the thread are flushed to 
+  main memory. 
+  
+  when next thread acquires the lock, it reads the latest updated values
+  from the memory. 
+  
+  
+  
+  Create a thread using Runnable that prints a message like:
+"Learning Java Threads" 5 times with a delay of 1 second.
+
+Steps:
+-----
+1. create a class which implements Runnable
+2. override the run() method
+3. Write the logic inside run() - print message 5 times using for loo
+4. add Thread.sleep(10000) for delay  
+5. Create an object of the Runnable class
+6. Create Thread object and pass Runnable object
+7.  call start() to run the thread
+  
+  
+    
+  
+  
+  
+  Thread Life Cycle:
+  -----------------
+  
+  Every java thread will go through set of states 
+  during its life time. 
+  The JVM manages the thread life cycle. 
+  
+ NEW STATE: 
+ ==========
+ The thread object is created,  but start() is not yet
+ called.  
+ 
+ RUNNABLE STATE: 
+ ---------------
+ The thread is eligible to run, 
+ it may be executing on a CPU
+ 
+ BLOCKED STATE: 
+ When a thread is waiting to acquire
+ a lock 
+ When it tries to enter a synchronized block
+ 
+ WAITING STATE: 
+ A thread is said to be in WAITING state when
+ it indefinitely waits for another thread by calling
+ wait() or join().
+ 
+TIMED WAITING: 
+A thread is said to be in TIMED_WAITING stATE when
+sleep(milliseconds), join(millisecond)
+
+TERMINATED: 
+A thread is said to be in a terminated state  when 
+run() has completed . 
+  
+  
+  
+  
+  
  
   
   
