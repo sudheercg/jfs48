@@ -1,26 +1,23 @@
 package com.codegnan.corejava.threads;
 
-public class Demo01 {
+public class CounterDemo {
 	
 	public static void main(String[] args) {
 		
 		Counter counter = new Counter(); 	
-		
-		
+				
 		Thread t1 = new Thread(()->{
 			for(int i =0; i<1000; i++) {
 				counter.increment();
 			}
 		});
-		
-		
+				
 		Thread t2 = new Thread(()->{
 			for(int i =0; i<1000; i++) {
 				counter.increment();
 			}
 		});
-		
-		
+				
 		t1.start();
 		t2.start();
 		
@@ -30,17 +27,10 @@ public class Demo01 {
 			t2.join();
 			
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println(counter.getCount());
-		
-		
-		
-		
-		
+		System.out.println(counter.getCount());		
 		
 	}
 	
-
 }

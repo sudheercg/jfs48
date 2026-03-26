@@ -183,6 +183,52 @@ A thread is said to be in a terminated state  when
 run() has completed . 
   
   
+wait(), notify(), notifyAll()
+
+Producer: Produces the message(writing the message)
+Consumer: Consumes the message(reading the message)
+
+Producer will produce the new message only when 
+consumer consumes the message.
+
+Consumer can consume the message only when the producer
+produces a new message. 
+
+Whenever the consumer consumes message, it informs the 
+producer that the message has been consumed. 
+
+Whenever the producer produces the message, it informs
+the consumer that the message has been produced.
+  
+  wait():
+  wait() method is defined in Object class
+  It causes the current thread to pause (go into waiting stage)
+  until another thread calls notify() or notifyAll()
+  on the same object. 
+  
+  _ It must be called inside a synchronized method 
+  when a thread calls wait, it releases the lock so that other threads can 
+  acquire the lock on this object. 
+  
+  
+  
+  notify():
+  -wakes up one waiting thread which is waiting for the same objects lock.
+  -does not release the lock immediately. 
+  - the lock will be released only when the current thread exits the synchronized block. 
+  - It is useful when you want to notify a single thread to resume its work.
+  
+  
+  
+  notifyAll()
+  -  Wakesup all the threads that are waiting for the same objects lock . 
+  
+  wait() , notify(), notifyAll methods belong to Object class.
+  They are not the methods of Thread class. 
+  
+  
+  
+  
   
   
   
