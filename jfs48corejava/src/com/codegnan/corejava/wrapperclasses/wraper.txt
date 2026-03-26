@@ -1,0 +1,78 @@
+Wrapper class: 
+
+Wrapper classes are the classes which helps us to convert
+a primtive type to an object type. 
+
+In concepts like Serialization or Collections framework
+the primitives are not allowed. We can use primitives
+after converting them into objects by using wrapper classes. 
+
+Java provides various wrapper classes for primitive types:
+
+Primitive               Wrapper
+
+byte                    Byte
+short                   Short
+int                     Integer
+long                    Long
+float                   Float
+double                  Double
+char                    Character
+boolean                 Boolean
+
+
+Autoboxing:
+---------- 
+Autoboxing is the automatic conversion of a primitive type to
+its corresponding class object. 
+This is introduced from Java 5 onwards.
+
+Autounboxing: 
+Autounboxing is the automatic conversion of Object type to
+its corresponding primitive type. 
+
+Prior to Java 5:
+---------------
+primitive -> wrapper conversion: 
+valueOf() method
+EgL 
+Integer obj = Integer.valueOf(10);
+
+
+Wrapper to primitivie: 
+-------------------
+using xxxValue() methods
+for int intValue()
+int i = obj.intValue();
+double d = obj.doubleValue(); 
+boolean b = obj.booleanValue(); 
+
+
+To convert String to corresponding pritmive types: 
+---------------------------------------------------
+-parseXXX() methods are used to convert a String to 
+corresponding primitive types. 
+These methods are available in all wrapper classes like
+Integer, Double , Float etc. 
+
+Syntax: parseInt(String)
+
+String myInt = "800";
+int i = Integer.parseInt(myInt);
+
+parse methods always return a primitive value. 
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+

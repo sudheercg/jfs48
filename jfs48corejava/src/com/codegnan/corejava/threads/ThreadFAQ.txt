@@ -1,0 +1,14 @@
+1. What is a thread in Java. What is a main thread, What are Thread Priorities.	
+2. What is the difference between Thread and Process
+3. What are different ways to create a Thread. 
+4. What is the preferred way to create a Thread is it subclassing Thread or
+   implementing Runnable ?
+5. Steps to create a thread extending Thread class and implementing Runnable interface - Example
+6. Important methods of Thread - start() , run(), interrupt(), join()
+7. Different Lifecycle stages of a Thread. - 6 Stages of a Thread
+8. Method Synchronization - synchronized keyword
+9. Counter Program which increments the count variable using two concurrent threads. 
+10.Methods of Object class - wait(),notify(), notifyAll()
+   Producer - Consumer Example. 
+
+
