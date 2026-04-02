@@ -15,8 +15,11 @@ public class WrapperDemo {
 	    //primitive int
 	    int myIntVar =20;
   
-	    //Autoboxing
+	    //Autoboxing - primitive to obj
 	    Integer intObjVar = myIntVar;
+	    
+	    //Autounboxing - obj - primitive
+	    int intVar = intObjVar;
 	    
 	    
 	    

@@ -1,4 +1,5 @@
 Wrapper class: 
+=============
 
 Wrapper classes are the classes which helps us to convert
 a primtive type to an object type. 
@@ -27,7 +28,8 @@ Autoboxing is the automatic conversion of a primitive type to
 its corresponding class object. 
 This is introduced from Java 5 onwards.
 
-Autounboxing: 
+Autounboxing:
+------------ 
 Autounboxing is the automatic conversion of Object type to
 its corresponding primitive type. 
 
@@ -61,6 +63,32 @@ String myInt = "800";
 int i = Integer.parseInt(myInt);
 
 parse methods always return a primitive value. 
+
+
+Object vs Primitive 
+--------------------
+
+Primitive data types
+- Store actual values directly
+- faster and consumes less memory
+- they are stored in stack memory\
+eg: 
+int a =10;
+
+Objects or non Primitive types
+- Store reference , 
+- created from classes
+- stored in heap memory
+
+Object will have 3 things: 
+1. State - values of variables(data)
+2. behaviour - methods(actions)
+3. identity - a memory references which are unique
+
+
+
+
+
 
 
 

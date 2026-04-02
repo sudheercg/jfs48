@@ -1,0 +1,20 @@
+Generics:
+
+A generic class is a class that can work with
+different data types by using a type parameter like T. 
+
+Syntax:
+class ClassName<T>{
+	 T variable;
+} 
+
+In the above, T is called Type parameter
+It acts like placeholder for any data type. 
+
+Type is decided at runtime usage. 
+Same class can work for multiple data types. 
+It provides type safety
+And it removes the need for type casting.
+
+
+

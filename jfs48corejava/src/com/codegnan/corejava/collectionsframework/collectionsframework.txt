@@ -1,0 +1,104 @@
+Collection: 
+
+List  - Store lists - Duplicates are allowd  
+
+FruitsList: 
+Apple
+Banana
+Guava
+Lemon
+Apple
+
+- ArrayList
+-LinkedList
+-Vector
+-Stack
+
+
+
+Set   - No duplicates only unique values are allowed
+
+HashSet
+LinkedHashSet
+TreeSet
+
+
+Map - K,V
+
+7373737373    - Raj
+7474747747      Sami
+7373737375      
+
+HashMap
+TreeMap
+LinkedHashMap
+
+
+Collections framework: 
+
+Collections framework is a set of classes and interfaces used to store and manipualte froupos of objects. 
+
+These are located in java.util. 
+
+The main interfaces of Collections framework:
+
+Collection: 
+- It is called the root interface of Collection framework
+- It represents group of objects.
+- It is present in java.util package
+- It is the parent interface of List,Set and Queue interfaces
+
+Array vs ArrayList: 
+
+1. Array is fixed in length
+   ArrayList is dynamic, meaning it can grow it can also shrink.
+2. Array can store primitives and objects
+   ArrayList can store objects only. 
+3. To find the length of the array we use length property
+   to find the length of an ArrayList we use size();
+   
+ Important features of ArrayList: 
+ 
+ 1. ArrayList can grow and shrink automatically
+    No need to define the size in advance
+ 2. It maintains insertion ordert. 
+ 3. It allows duplicates
+ 4. It allows null
+ 5. ArrayList can act as heterogeneous as well as homogeneous. 
+ 6. ArrayList is also called as growable array or expandable array. 
+ 
+ 
+   
+   
+   
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
