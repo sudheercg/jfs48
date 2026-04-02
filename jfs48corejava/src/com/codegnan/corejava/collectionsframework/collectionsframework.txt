@@ -71,7 +71,11 @@ Array vs ArrayList:
    
    
    
+ Create a List of Courses and display the contents of the List. 
  
+ 1. Create a arraylist object
+ 2. use add() to add courses
+ 3. Display the List
 
 
 
