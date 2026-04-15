@@ -10,3 +10,7 @@ public class NameComparator implements Comparator<Employee> {
 	}
 
 }
+
+
+// Create a SalaryComparator and  sort the Employee objects
+  //based on the salary in ascending order and descending order. 

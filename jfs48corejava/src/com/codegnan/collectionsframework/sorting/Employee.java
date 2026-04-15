@@ -6,7 +6,6 @@ public class Employee {
 	private String name;
 	private double salary;
 	
-	
 	public Employee(int id, String name, double salary) {
 		super();
 		this.id = id;

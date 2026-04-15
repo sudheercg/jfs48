@@ -1,0 +1,61 @@
+TasK
+
+Create a class Student
+- id int
+- name String
+- marks int
+
+Use Collections.sort to sort the list of student objects  by:
+  1. sort by id
+  2. sort by name
+  3. sort by marks
+  
+step1: Create a Student class which implements Comparable interface
+step2: override compareTo() method of Comparable interface
+step3: In your test class, create a list of Student objects
+step 4: Sort the student objects by calling Collections.sort() method
+
+
+
+
+
+
+
+Comparable interface:
+====================
+- It is present in java.lang
+- this interface has only a single abstract method
+   public int compareTo(T o);
+- compareTo() method returns an int value.
+  this int value could be 
+   - it returns a positive value if the first value is greater
+      than second value
+    - it returns zero if both values are equal
+    - it returns a negative value if first value is less than
+       the second value
+       
+       
+  For objects of a class to be sorted, the class must
+   implement Comparable<T> interface. 
+  
+  In the class we need to override the compareTo() method,
+  and specify the field  through which we need the objects
+  to be sorted. 
+  
+  
+  Comparator interface: 
+  ----------------------
+  Its present in java.util
+  It  is a functional interface,meaning
+  it has a Single Abstract  Method.
+  
+      int compare(T o1, T o2);
+     
+  - compare() method returns an int value.
+  this int value could be 
+   - it returns a positive value if the first value is greater
+      than second value
+   - it returns zero if both values are equal
+   - it returns a negative value if first value is less than
+       the second value
+  
