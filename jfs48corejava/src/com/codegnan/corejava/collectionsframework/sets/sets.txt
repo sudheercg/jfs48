@@ -1,0 +1,34 @@
+Internal working of a HashSet
+
+- Hash- Hash is a number generated from an object 
+         using function object.hashCode();
+         
+  hashCode method will: 
+  1. convert object into an integer value.
+  
+  HashSet will : 
+   step1: It will hashCode() on the object
+   
+   step2: 
+   Hashset internally uses a HashMap with an array. 
+   It calculates index of the object. 
+   
+   Step3: AFter calculating the index: 
+   If the array index is empty the object is stored directly
+   If it is not empty it will handle collision 
+   
+   Ste4: To handle duplicate elements in Hashset
+   Hashset uses equals() method to compare the objects. 
+   
+   
+   LinkedHashSet: 
+   
+   LinkedHashSet internally uses a doubly linked list. 
+   LinkedHashSet stores only the unique objects, it avoids duplicates
+   LinkedHashSet preserves the insertion order, it maintains the order
+   in which the elements are stored. 
+   LinkedHashSet is slightly slower than HashSet, because
+   it provides insertion order. 
+   
+   
+   

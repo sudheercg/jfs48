@@ -19,7 +19,7 @@ public class WrapperDemo {
 	    Integer intObjVar = myIntVar;
 	    
 	    //Autounboxing - obj - primitive
-	    int intVar = intObjVar;
+	   // int intVar = intObjVar;
 	    
 	    
 	    

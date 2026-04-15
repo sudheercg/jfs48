@@ -1,0 +1,152 @@
+ArrayList<String> al = new ArrayList<>();
+
+String is a sequence of characters. 
+
+
+//String object
+
+String company ="Codegnan";
+
+String can be created using : 
+
+new Keyword
+Literal (Constant value)
+
+
+
+String: 
+
+A string is a sequence of characters
+String is an object, it is not primitive
+It is present in java.lang package.
+
+
+String Creation:
+
+String can be created in 2 ways:
+1. Using String literal
+eg: String s1="Hello";
+  Strings created using Literal is stored in String constant Pool
+  JVM reuses memory for similar Strings, i.e if a String is already
+  present in SCP, same string will not be created again.
+  
+ 2. Using new keyword.
+ 
+ String s1 = new String("Hello");
+
+String created using new keyword will be created in Heap memory
+It always creates a new object
+
+3. String can also be created from charactet Array
+
+char[] ch ={'H','E','L','L','O'};
+String s = new String(ch);
+
+4. Strings can also be created using StringBuilder and StringBuffer. 
+
+
+String Constasnt Pool: 
+---------------------------
+Its a special memory area inside the heap memory. 
+It stores unique STring literals. 
+
+String Immutability: 
+------------------------
+A string is immutable, i.e once created, its value cannot be changed. 
+
+-Strings are immutable because they are used as 
+  DAtabase URL's File Paths, Networks connections etc.
+  When Strings are immutable, it prevents accident or malicious changes
+  
+- No synchronization needed
+- Safe to use in multithreaded environment
+- String immutability will also help to reuse the String literals
+   in SCP,
+- It saves memory. 
+
+String comparision: 
+-------------------
+String can be compared with == operator and equals() method: 
+eg: String s1="java";
+     String s2 ="Java";
+     sop(s1==s2); //true
+     
+  equals() - It is for comparing the values
+  eg: sop(s1.equals()s2);
+
+StringBuffer and StringBuilder: 
+-------------------------------
+String is immutable (cannot change once created)
+Every modification will create a new String object. 
+
+To solve this: 
+We use mutable STrings
+ - Mutable Strings can be created with StringBuffer and StringBuilder
+ 
+ Difference between StringBuffer and StringBuilder: 
+ --------------------------------------------------
+ 1. StringBuffer is synchronized or threadsafe.
+    StringBuilder is not synchronized or not threadsafe.  
+    
+ 2. Performance of StringBuffer is slower because of synchronization
+    overhead. 
+    StringBuilder is faster than StringBuffer as there is no 
+    synchronization overhead. 
+    
+ 
+    
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

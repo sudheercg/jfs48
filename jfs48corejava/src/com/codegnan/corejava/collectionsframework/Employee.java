@@ -1,6 +1,6 @@
 package com.codegnan.corejava.collectionsframework;
 
-public class Employee {
+public class Employee implements Comparable<Employee>{
 	
 	private int id; 
 	private String name;
@@ -47,6 +47,20 @@ public class Employee {
 	
 	public String toString() {
 		return "ID: "+id+" "+"Name: "+name+"Salary: "+salary;
+	}
+	
+	
+
+	
+	public int compareTo(Employee employee) {
+		
+		//return Integer.compare(this.id, employee.id);
+		
+		//return Double.compare(this.salary, employee.salary);
+		return this.name.compareTo(employee.name);
+		
+		
+		
 	}
 
 	

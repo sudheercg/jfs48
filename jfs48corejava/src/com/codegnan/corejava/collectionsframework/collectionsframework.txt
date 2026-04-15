@@ -76,6 +76,146 @@ Array vs ArrayList:
  1. Create a arraylist object
  2. use add() to add courses
  3. Display the List
+ 
+ 
+ LinkedList: 
+ ------------
+ - LinkedList  internally implements doubly linked List
+ - DLL stores data in the form of nodes.
+   Each node will have: 
+   -Data
+   -Pointer to the previous node
+   -POinter to the next node
+ - LinkedList implements List,Queue,Deque
+ - Allows duplicates and nulls
+ - provides methods like
+ 	-addFirst()
+ 	-addLast()
+ 	-removeFirst()
+ 	-removeLast
+ 	
+ 	These methods are not present in ArrayList
+ - LinkedList maintains insertion order.
+ 
+ LinkedList vs ArrayList: 
+ 
+ - ArrayList stores the data in contigious memory locations
+   LinkedList stores data in nodes(uses doubly linked list)) 
+  
+ - Searching is faster in ArrayList
+    Searching is slower in LinkedList because it has to traverse each
+    node sequentally
+ - ArrayList requires shifting of the elements for insertions and deletions
+ - LinkedList doesnt require shifting. only the links are changed
+ - ArrayList uses less memory
+   LinkedList uses more memory because it needs memory to store prev and next pointers
+ - ArrayList has an initial capacity of 10.
+   Wjhen the capacity is full, a new Array with l;arger capacity will be created
+   All elements will be copied from old array to new array, old array will be
+   deleted. 
+   
+   
+   
+   
+   ArrayList is not thread-safe 
+   
+   - Multiple threads can modify ArrayList at same time.
+     This leads to data inconsistency
+     
+    To use ArrayList in multithreaded environment, we use
+      Collections.synchronizedList();
+      eg: Collections.synchronizedList(new ArrayList<>());
+      
+      
+   List interface - Duplicates allowed
+   - ArrayList
+   - LinkedList
+   - Vector 
+   - Stack
+   
+   Cursors:
+   -------
+   Cursors are used to iterate the elements from the  collection.
+   While  iteration, some operations can be performed on collection using
+   curosr. 
+   
+   Iterator:
+   --------- 
+   Iterator is a cursor which helps to iterate the elements from the cursor. 
+   It is an interface which is present in java.util package. 
+   To use iterator to iterate the objects, we need Iterator object
+   To create iterator object, we call iterator() method which returns Iterator object
+   This iterator() method is present in Iterable interaface.
+   It is available with all collection classes which implements Interable interface
+   Methods: 
+   hasNext() - returns a boolean value true or false,  returns true if object exists in the list else false
+   next() - returns next element in the collection
+   remove() - removes an element from the collection. 
+   - Iterator traverses/moves only in the forward direction. 
+   
+   Enumeration: 
+   ------------
+   Enumeration is a legacy cursor in java.util package
+   It works with legacy classes like Vector. 
+   To create Enumeration object, elements() method is used. 
+   Methods: 
+   hasMoreElements() : return true if elements exist, else false. 
+   nextElement() : returns the next element in vector
+   
+   ListIterator: 
+   ------------
+   -ListIterator extends Iterator interface
+   -ListIterator cursor can be used only with List implementation classes. 
+   -ListIterator can travel both in forward direction and backward direction
+   - To get a ListIterator object, listIterator() is called, which returns an object of ListIterator
+   - Methods: 
+   hasNext(): returns a boolea true or false, checks if there is next element in the list
+   next() : returns next element in the collection
+   hasPrevious(): will check whether there is a element in the previous position
+   previous(): will return previous element.
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    - Enumeration - legacy
+    - Iterator - Universal cursor
+    - ListIterator  - Not a universal cursor
+    
+  
+    
+   
+   Set interface - Duplicates not allowed
+    - HashSet
+    - LinkedHashSet
+    - TreeSet
+     
+ 
+ 
+ 
+ 
+ 
+ 
 
 
 
@@ -88,6 +228,22 @@ Array vs ArrayList:
 
 
 
+TasK
+
+Create a class Student
+- id int
+- name String
+- marks int
+
+Use Comparator.sort to sort the list of student objects  by:
+  1. sort by id
+  2. sort by name
+  3. sort by marks
+  
+step1: Create a Student class which implements Comparable interface
+step2: override compareTo() method of Comparable interface
+step3: In your test class, create a list of Student objects
+step 4: Sort the student objects by calling Collections.sort() method
 
 
 
@@ -95,7 +251,31 @@ Array vs ArrayList:
 
 
 
+Comparable interface:
 
+- It is present in java.lang
+- this interface has only a single abstract method
+   public int compareTo(T o);
+- compareTo() method returns an int value.
+  this int value could be 
+   - it returns a positive value if the first value is greater
+      than second value
+    - it returns zero if both values are equal
+    - it returns a negative value if first value is less than
+       the second value
+       
+       
+  For objects of a class to be sorted, the class must
+   implement Comparable<T> interface. 
+  
+  In the class we need to override the compareTo() method,
+  and specify the field  through which we need the objects
+  to be sorted. 
+  
+  
+  
+  
+  
 
 
 
