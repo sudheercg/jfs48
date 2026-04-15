@@ -252,7 +252,7 @@ step 4: Sort the student objects by calling Collections.sort() method
 
 
 Comparable interface:
-
+====================
 - It is present in java.lang
 - this interface has only a single abstract method
    public int compareTo(T o);
@@ -273,8 +273,21 @@ Comparable interface:
   to be sorted. 
   
   
+  Comparator interface: 
+  ----------------------
+  Its present in java.util
+  It  is a functional interface,meaning
+  it has a Single Abstract  Method.
   
-  
+      int compare(T o1, T o2);
+     
+  - compare() method returns an int value.
+  this int value could be 
+   - it returns a positive value if the first value is greater
+      than second value
+   - it returns zero if both values are equal
+   - it returns a negative value if first value is less than
+       the second value
   
 
 
