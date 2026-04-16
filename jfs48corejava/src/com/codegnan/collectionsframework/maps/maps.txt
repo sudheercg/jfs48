@@ -1,0 +1,48 @@
+Map :
+- It does not extend Collection interface
+- Map interface represents the data in the form of Key and Value pairs. 
+- Implementation classes of Map: 
+   - HashMap
+   - LinkedHashMap
+   - TreeMap
+   
+ HashMap: 
+ - HashMap is an implementation of Map interface
+ - It uses put() method to add an entry in the HashMap. 
+ -
+ Eg: Key and value pairs
+ 
+   Key         Value
+ AadharId    PersonName
+ 29292992     XYZ       - Entry
+ 83838383     ABC       - Entry        EntrySet
+ 87778889     XYZ       - Entry
+ 
+ A hashmap will have key and value pairs
+ Each Key and Value pair is known as Entry
+ Set of such entries are known as EntrySet. 
+ The set of keys in a hashmap is known as keyset.
+ Group of values are known as values.
+ 
+ The keys in HashMap must always be unique,
+ But corresponding values can be repeated..
+ 
+ 
+ to get Keys -- keySet()
+ to get Values-  values()
+ 
+ entrySet();
+ 
+ Entry - K,V
+ 
+ entry.getKey()
+ values()
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
