@@ -1,6 +1,6 @@
 package java8features.f1;
 
-public class MyImpl{
+public class MyImpl {
 	
 	/*
 	public void doSomething() {
@@ -10,6 +10,8 @@ public class MyImpl{
 	
 	public static void main(String[] args) {
 		
+		
+		//Lambda expression
 		
 		MyFunctionalInterface m= ()->System.out.println("Doing something");
 		

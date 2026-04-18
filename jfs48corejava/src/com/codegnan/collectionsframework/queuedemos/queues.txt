@@ -1,0 +1,56 @@
+Queue is an interface which extends Collection interface
+- Queue follows FIFO (First IN First Out) 
+- LinkedList class implements Queue interface
+
+- In queue elements are added at the rear.
+- Elements are rremoved from the front. 
+
+Common metbhods in Queue: 
+- offer() - add element
+-poll() - to remove element
+- peek() - to view the element
+
+- It maintains insertion order
+- It allows duplications. 
+
+
+Deque: 
+-----
+- Interface which extends Queue
+- Deque is a short form for Double Edged Queue or Double ended Queue,]
+- Deque acts as Queue (FIFO) and as Stack(LIFO)
+- It allows you to add and remove the elements from both 
+   sides - front and rear
+
+
+ArrayDeque is an implementation class  of Deque: 
+
+
+PriorityQueue: 
+=============
+PriorityQueue is a special type of queue where elements are ordered by priority
+not by insertion order. 
+
+- In the normal queue elements follow FIFO
+- But in priorityQueue smallest will have highest priority. 
+- the highest priority elements comes firt. 
+- the smallest element is always at the front. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

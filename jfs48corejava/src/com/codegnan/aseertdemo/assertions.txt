@@ -1,0 +1,23 @@
+Assertions:
+
+Assertion is a debugging tool used to test assumptions in code. 
+It is introduced java 1.4
+Used to find lofical errors during development.
+
+Syntax:
+
+assert condition;
+
+assert condition: message;
+
+Assertions check if a condition is true.
+If the condition is false, AssertionError is thrown. 
+Assertions are disabled by default.
+
+We need to enable Assertions by using the JVM option
+   java -ea className
+   
+In Eclipse, use VM arguments in Run As -> Run Configuration options 
+
+
+  
