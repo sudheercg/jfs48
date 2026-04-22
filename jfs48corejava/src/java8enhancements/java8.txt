@@ -1,0 +1,138 @@
+Java 8 Features: 
+
+ - Functional Programming
+ - Functions are treated as first class citizens.
+ - Function can be as an argument to another function
+ - Function can be a return type for a method. 
+ 
+ 
+1. Functional Interface: 
+- Single Abstract Method 
+
+Java 8 interface can have any number of abstract methods. 
+
+But if you create only a single abstract method in the interface
+then, such interfaces are called as Functional interface. 
+
+In Java 8, an interface allows you to have 
+ - abstract methods - mandatory to override in child class
+ - default methods - its not mandatory to override default methods
+ - static methods - its not mandatory to override in implementation. 
+ 
+ default method: 
+ - default method is a method which is declared with
+   'default' keyword. 
+   syntax:
+   
+   default returntype methodName(){
+   // statements
+   } 
+    eg: 
+   default void method2() {
+		System.out.println("Default Method");
+	}
+
+static method:  
+---------------
+- static method is declared using the keyword 'static'
+- They can be accessed in implementation classes by using the class name. 
+
+eg: MyClass.mystaticMethod(); 
+
+
+Lambda Expression: 
+
+Lambda expression is a shortcut for interface method implementation. 
+
+To use a Lambda expression as a method implemention, the interface must be functional interface. 
+
+Steps: 
+
+Create a reference of interface
+ 
+ Syntax: 
+ 
+ InterfaceName variable = () ->methodimplementation;
+ 
+ In the above 
+ () denotes the arguments of a method. 
+ On right of the arrow we will have the method implementation. 
+ 
+ - Method return type, access modifier, method name are not required. 
+ 
+ 
+java.util.function: 
+==================
+
+ArrayList <Integer> marks = new ArrayList<>();
+
+
+- keep only passed Students (filtered List)
+- convert these marks into Grades...
+- print them
+
+without any loops. 
+
+StreamAPI: 
+marks.stream().filter(m->m>50).map(m->80?"A": "B").forEach(System.out::println);
+ 
+ Predicate 
+ ----------
+ -present in java.util.function
+ -Its a functional interface
+Method: 
+    boolean test(T t);
+ -  test() method returns a boolean true or false and it takes an an
+     object as an input. 
+     
+  BiPredicate
+  -----------
+ 
+ - Same as predicate but the test() in BiPredicate takes 2 objects as input. 
+ 
+ Function:
+ --------
+ - present in Java.util.function
+ _ it has a single abstract method
+    R apply(T t)'
+    where R can be any return  type
+           T can be an argument of any type. 
+    
+ 
+ 
+ Consumer : 
+ - its in java.util.function package
+ - It has a method 
+    void accept(T t);
+    - the accept() method takes one input and returns no result . 
+
+
+Supplier: 
+- It is in java.util.function package
+- it has a method :
+      T get();
+      
+      get() takes no argument
+      returns a value of type T
+    
+ 
+ 
+
+
+
+
+
+
+
+
+
+ 
+	
+
+	
+ 
+ 
+ 
+ 
+ 
+ 

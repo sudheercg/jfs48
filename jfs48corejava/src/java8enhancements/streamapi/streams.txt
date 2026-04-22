@@ -1,0 +1,75 @@
+
+StreamAPI:
+----------
+==========
+
+Introduced in Java 8 version. 
+
+Stream: 
+======
+A sequencer of elements that supports functional-style operations to 
+process the data. 
+
+A stream can also be called as a pipeline which takes data from 
+source , performs operations on it and produces some result. 
+
+- Stream does not store data , Collections like arraylist or linkedlist
+   are used to store data. 
+- Stream works on a datasource like List or Set or Array
+- It supports various operations like filter(), Map()
+
+Streams aPI supports two types of operations: 
+
+1. Intermediate Operations:
+---------------------------
+Intermediate operations are the operations which allows us to transform
+or filter the objects before the final result is produced. 
+
+These operations return another stream object as a result. 
+
+These operations can be chained one after the other. 
+
+
+2. Terminal operations: 
+----------------------
+Terminal operations will start/trigger the execution of the
+entire stream pipe line. 
+They produce a result such as a collection, tey do not return a stream. 
+
+
+
+Lazy  Evaluation vs Eager evaluation: 
+=======================================
+
+Lazy Evaluation: 
+----------------
+Lazy evaluation is used by intermediate operations like map, filter, sorted.
+These operations are called lazy because they are not executed immediately
+when the stream is created. 
+They are just recorded to run later.
+
+
+Eager evaluation:
+------------------ 
+Terminal operations collect, forEach etc will trigger  the execution of 
+intermediate operations. 
+- As soon as terminal operation is called, it immediately executes
+all the intermediate operations.
+Thats why terminal operation are called eager operations. 
+
+Stream object can be created using two ways: 
+Call stream() method of your collection
+or call of()
+
+Pipeline:
+Collection->Stream -> operatios ->Result
+ 
+
+
+
+
+
+
+
+
+

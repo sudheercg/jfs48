@@ -2,6 +2,27 @@ package com.codegnan.aseertdemo;
 
 public class Demo {
 	
+	
+	
+	void myMethod() {
+		System.out.println();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	//without assert- normal method
 	public int calculateYearOfBirth(int age) {	
 		return 2026 - age;
