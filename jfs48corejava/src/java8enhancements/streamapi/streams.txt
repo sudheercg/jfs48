@@ -64,6 +64,40 @@ or call of()
 Pipeline:
 Collection->Stream -> operatios ->Result
  
+ 
+ 
+Intermediate operations: 
+filter() - filter elements based on a condition
+
+map() - transforms elements into another form
+
+distinct()
+sorted()
+peek()
+limit()
+
+
+Terminal operations: 
+mcollect()
+forEach
+reduce()
+
+reduce()  
+=======
+ It is a terminal method which combines all elements of a stream into a single result. 
+ It is generally used for finding sum of list, product, to concatenate 
+ 
+Syntax: reduce((a,b)-> resultExpression);
+reduce(identityValue, (a,b)-> result expression)
+
+identityValue : 
+starting value,  it also called as initial accumulator, it is the default result.
+
+(a,b)-> resultExpression:   
+It is called as accumulator function , this combines current result (a) with next element (b)
+to produce a new result. 
+
+
 
 
 
