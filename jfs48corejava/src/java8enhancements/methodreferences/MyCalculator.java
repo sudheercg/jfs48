@@ -1,7 +1,8 @@
-package java8enhancements.streamapi;
+package java8enhancements.methodreferences;
 
 public class MyCalculator {
 	
+	//instance method
 	public int multiply(int a, int b) {
 		return a*b;
 	}

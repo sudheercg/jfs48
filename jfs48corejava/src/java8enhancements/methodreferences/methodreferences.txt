@@ -1,0 +1,62 @@
+Method References:
+
+Method references is a feature supported from java8
+
+It uses a operator called double colon operator ::
+
+Lmbda expression helps us to write inline
+implementation of functional interface method. 
+
+Method reference is a shorthand form of lambda expression
+
+Method reference just calls the existing method of a class. 
+For method reference we do not pass the arguments, they are 
+passed automatically. 
+
+2 types of method references: 
+1. static method reference
+- when a functional interface method matches a static method signature
+   we can use a static method reference
+   
+Syntax:  
+ClassName :: staticMethod
+
+2. Instance method reference: 
+Instance method reference is used when a functional interface method matches
+with non-static method of a given object. 
+
+Syntax:
+objectRef :: instanceMethod
+
+
+-------------------------------------------------
+
+
+1. Create an interface NameGenerator
+- String getFullName(String firstName, String lastName);
+
+2. Create a class MyStringGenerator with a method:
+- Create a method in the class: 
+ public String createString(String s1, String s2){
+    return s1+s2; 
+ }
+
+3. Create main method:
+
+4. Create a Lambda expression
+//Lambda
+NameGenerator n = (str1,str2)->str1+str2;
+
+5. Create a instance method reference
+//non-static method ref:
+MyStringGenerator m = new MyStringGenerator();
+NameGenerator n = m::createString;
+
+-call the interface method. 
+syso(n.getFullName("Ram","Singh"));
+
+
+
+
+
+

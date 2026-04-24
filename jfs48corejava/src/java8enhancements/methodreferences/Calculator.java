@@ -1,4 +1,4 @@
-package java8enhancements.streamapi;
+package java8enhancements.methodreferences;
 
 @FunctionalInterface
 public interface Calculator {

@@ -1,0 +1,18 @@
+Constructor Reference is used to 
+refer to a constructor of a class. 
+
+
+It uses :: operator to refer to constructor. 
+
+Syntax:
+
+ClassName :: new
+
+Constructor reference can be used when the 
+constructor signature matches with method signature of functional interface. 
+
+When the method of functional interface  is called, the 
+constructor will be automatically called. 
+
+
+
