@@ -1,0 +1,26 @@
+java .io
+
+IOStreams;
+-In java iostreams represent stream of input and output. 
+
+Stream: Sequence of bytes or characters/
+
+There are two types: 
+Input stream
+Output stream
+
+Character Streams: 
+In Java.io package, the classes which reads or writes
+the character data are known as character stream  classes.
+
+Character stream classes reads or writes the data character by
+by character. 
+
+java.io.File: 
+------------
+
+
+
+
+
+
