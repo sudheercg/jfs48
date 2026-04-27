@@ -1,26 +1,162 @@
-java .io
-
-IOStreams;
--In java iostreams represent stream of input and output. 
-
-Stream: Sequence of bytes or characters/
-
-There are two types: 
-Input stream
-Output stream
-
-Character Streams: 
-In Java.io package, the classes which reads or writes
-the character data are known as character stream  classes.
-
-Character stream classes reads or writes the data character by
-by character. 
-
-java.io.File: 
-------------
+java.io
 
 
+iostreams: 
+-In java, iostreams represents stream of 
+input and output. 
+
+Stream: sequence of bytes or characters
+
+- When an application reads a stream of data  from
+a file or any datasource, it is called input stream.
+
+- when an application sends/writes stream of data to a file or any other
+datasource, it is called output stream. 
+
+- There are two different types of streams:
+1. Character Streams:
+    Reads or writes the  character data, character by character. 
+    - Chracter Stream classes are useds to read and write character
+      data.
+      
+ File class (java.io)
+ 
+ File class has 2 different constructors:
+ File(String name):
+ creates a file object with the given name in argument
+ 
+ File file = new File("filename");
+ File file1 = new File("c:\\JFS51\\file1.txt");
+ 
+ Constructor2: 
+ File(dir, "filename");
+ This constructor is used to create a file in the specified
+ directory.
+ First argument is the name of the director, second argument
+ is the name of the file. 
+ 
+ Methods: 
+ exists(): returns true if the file/directory exists
+ createNewFile(): creates a empty file, returns true if created, false if alread
+                  exists
+ mkdir(): to create a director
+ isFile() : to check if it s a file or not
+ isDirectory():  returns true if  file object  points to the directory
+ list(): returns String[] of file /directory names
+ length() - returns the size ofa file in bytes
+ delete() - deletes the file or empty directory
+ 
+ 
+ FileWriter: 
+ ----------
+
+ 
+ -FileWriter class allows you to write the data to a 
+   file.
+   
+- It internally extends an abstract class Writer
+- It has multiple overloaded constructors
+FileWriter(String filename);
+FileWriter(String filename, boolean append);
+FileWriter(File f);
+FileWriter(File file, boolean append);
+
+try with resources(java 7)
+--------------------------
+try with resources allows you to declare resources like files, streams, database connections
+inside the try statement so that they are automatically closed after use. 
+
+- It eliminates the use for a finally block to close resources
+- prevents resource leaks
+- try with resources works with any object that implements AutoCloseable interface 
+
+Syntax: 
+
+try(FileWriter writer = new FileWriter("out.txt")){
+
+//statements
+
+}catch(Exception e){e.printStackTrace()}
+
+AutoCloseable interface: 
+=========================
+AutoClosable interface enables automatic resource management. 
+- its in java.lang
+- contains a single method close()
+
+Any class that implements Autoclosable can be used in
+try-with-resources
+eg: 
+FileWriter,FileReader,BufferedWriter,BufferedReader, Connection etc. 
+
+- When you use try-with-resources, JVM will automatically call close()
+- Even if exception occurs, resources are still safely closed. 
 
 
+
+FileReader class : 
+-------------------- 
+FileReader is present in java.io
+-Used for reading a file
+-REads the data character by character
+
+Constructors: 
+FileReader(String filename);
+FileReader(File file);
+
+read() - reads single character and returns teh int value(ascii 
+         equivalent decimal) 
+       - or it returns -1 if it reaches the end of the file. 
+       
+       
+BufferedWriter and BufferedReader classes: 
+- These classes adds a buffer(temporary memory) to speed up the 
+    reading and writing.
+- Buffer is a temporary memory area used to store data while reading or writing, 
+- All the characters are first read/written to a buffer and then all characters
+  are read/written at a time instead of one character a time. 
+  
+- In BufferedReader/BufferedWriter, the buffer improves the performance by
+  reducing direct I/O calls . 
+- read/wite happens in chunks instead of repeatedly accessing the file.  
+
+
+BufferedReader class: 
+- BufferedReader uses internal buffer
+- It reads a chunk of data from the file into memory once. 
+- when call readLine() or read() method the data is reterieved 
+  from the buffer in memory.
+- data is retrieved until the buffer is empty. 
+- readLine() method returns null once it reaches the end of file. 
+
+
+Abstract classes -  Reader and Writer :
+ 
+ They are used to read and write character data ,
+ 
+ Subclasses of Reader abstract class: 
+ - FileReader - reads from file
+ - BufferedReader - reads character data from Buffer
+ 
+ Subclasses of Writer abstract class: 
+ - FileWriter - writes to file
+ - BufferedWriter - writes using buffer
+ - PrintWriter - 
+     - It provides methods like print(), println() , printf() methods. 
+     - It can bsed to write different data types
+     - No need to handle IOExceptions explicitly.
+       as it does not throw checked exceptions.
+     - It can automatically flush data to the file when using
+         print(), println() or printf() method. 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
 
 
