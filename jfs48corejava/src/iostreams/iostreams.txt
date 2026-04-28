@@ -1,4 +1,5 @@
 java.io
+=======
 
 
 iostreams: 
@@ -149,7 +150,131 @@ Abstract classes -  Reader and Writer :
      - It can automatically flush data to the file when using
          print(), println() or printf() method. 
  
+Bytestream classes: 
 
+They are used mainly when we want to work with binary data instead of
+text /character data. 
+
+- Generally used for non-text files like images,videos, audio, 
+   pdf, excel etc. 
+   
+- Some important classes of Byte streams are: 
+  - FileInputStream
+  - FileOutputStream
+  - BufferedInputStream
+  - BufferedOutputStream
+  
+  - Using these classes we can export and import java objects. 
+  
+  Wrting and Reading of an Object to a file: 
+  ------------------------------------------
+  Objhects can be turned into data(bytes), so that they can be,
+  - Writtten to a file
+  - Read from the file
+  - send over the network
+  
+f  Java Object -> Byte stream -> Store in the file/disk/db
+  
+ file-> bytestream -> java object
+  
+Serialization: 
+- Serialization is the process of converting an object into a byte stream
+- Serialization is used to persist(saves the state) the object even 
+  after the program exigs. 
+- The converted byte stream can be saved as a file or sent over a network.
+- The byte stream can be sent to a different machine. 
+- Generally the bytestream is stored in a file with .ser extension. This
+  file is platform independent. 
+  
+  Steps for Serialization: 
+  - create a n object of FileOutputStream
+  - Pass the name of the file(String) as an argument to FileInputStream constructor
+  - Wrap it with BufferedOutputStream - for faster writing
+  - Wrap with ObjectOutputStream which converts the object into bytes. 
+  - Use writeObject(object) to save the object. 
+  
+  
+  Steps for Deserialization: 
+  -  Deserialization is the process of converting byte stream into an object. 
+  -  Create an object FileInputStream
+  - Pass the name of the file(String) as an argument to FileOutputStream constructor. 
+  - Wrap it with BufferedInputSTream for faster reading
+  - Wrap with ObjedtInputStream which rebuilds the object from bytes. 
+  - Use readObject() to get the originbal object. 
+  
+  Marker Interface: 
+  A marker interface is an interface with no methods. It is used
+  by JVM or the compiler to mark a class with some special meaning. 
+  
+  - It is also called as Tag interface
+  - In modern java we use Annotations instead of Marker interfaces. 
+  
+examples of marker interfaces: 
+ Serializable
+ Cloneable
+ RandomAccess
+ 
+  NotserializableException: 
+  ------------------------
+  NotSerializableException is a runtime exception. 
+  It occurs when we try to serialization an obect that does not implement Serializable
+   interface. 
+  For an object of a class to be eligible for serialization process, the class
+   must implement Serializable marker interface. 
+   
+ 
+   
+  transient modifier:
+  ==================
+  
+  transient is a non-access modifier 
+  It is used to exclude a variable from serialization process. 
+  
+  When an object is seriallized into a bytestream all of its variables are automatically
+  saved. 
+  
+  But when we want a particular field to skip the serialization process, we 
+  need to use the modifier 'transient' for that field. 
+  
+  Eg; Passwords, secret keys or some confidential data.
+  
+  transient modifier only works with instance variables.
+  
+ transient modifier with static variables: 
+ -----------------------------------------
+ static variables are not serialized at all
+ Serialization works on objects
+ static variables belong to the class, but not individual objects
+ so java does not save static variables when serializing an object. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+  
+  
+  
+
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
