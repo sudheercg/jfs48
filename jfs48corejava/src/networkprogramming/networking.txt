@@ -1,0 +1,120 @@
+Client - Server
+
+Client: 
+A program that request service from the server.
+Client sends the request to the server 
+
+eg: 
+Browser
+
+Server: 
+It is a program  which  provides a service
+Server processes the client request, and sends 
+the response back to the client. 
+
+Flow: 
+Client -> request -> Server -> Server processes the request
+                                          |
+      Client  <-response <-Server  <- Server prepares the response
+      
+ 
+ Port: 
+ - Not hardware devices
+ - It is a logical connection to a comphter
+ - Ports are identified by a number in the range 1-65535
+ 
+ - EAch port may be dedicated to a particular server/service
+ - Port numbers 1-1023 must not be used by application programs
+  they are used by System resources
+  
+  Eg: MySQL - 3306
+      Tomcat - 8080
+      
+   IP Address: 
+   Each computer on the internet will have unique IP Address.
+   
+ amazon.com -> 122.3.344.34
+
+http://www.codegnan.com  -> 232.23.3.9:8080
+
+URL: Uniform Resource Locator
+
+Syntax/Singnature:
+
+<protocol>://<hostname>:<port>/path
+
+
+EndPoint : 
+It is one end of communication channel in a network
+- Its a program that sends or recieves data
+=
+Every endpoint will have: 
+
+IP Address + Port Number
+
+eg: 
+124:167:98.1:5000
+
+Socket:
+Socket is a communication endpoint used to send and recieve the data between
+the client and server. 
+
+
+In Java, 
+ Socket
+ ServerSocket,
+ DatagramSocket
+ 
+ TCP and UDP: 
+ 
+ TCP: Transmission Control Protocol
+ Connection oriented protocol
+ DAta is divided into packets
+ Each packet will have a sequence number
+ Each packet will also have a checksum
+ 
+ UDP: User datagram protocol
+ _Connection less protocol
+ - data is sent directly
+ - no guarantee of deliver
+ - faster because no acknowledgement is sent 
+ 
+TCP Server:
+1. Create a ServerSocket and we need specify the port 5000
+2. Accept client connection
+3. Read data from client
+ using BufferedREader, InputStreamReader
+4. Send response to the clilent by using PrintWriter
+5. Close resources. 
+
+TCP Client
+
+
+
+
+
+
+
+
+
+
+
+TCPClient
+ 
+    
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+   
+  
+  
