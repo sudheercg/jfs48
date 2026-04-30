@@ -1,0 +1,93 @@
+Date  class:
+
+- Date is a class to represent date and time
+- It is in java.util
+- It uses Epoch date
+- Epoch date is Januar 1, 1970, 00:00:00
+
+- Date is stored as milliseconds since the epoch time
+- It is also called Unix time stamp
+
+- Date class is not thread safe , because it is a mutable class
+- This leads to bugs in the multi threaded programs
+
+Instead of Date class there are new alternatives from Java 9 onwards
+: 
+LocalDate - Only Date
+LocalTime - Only
+LocalDateTime - date +time
+
+SimpleDateFormat: 
+-----------------
+- Present in java.text
+- To format and parse dates
+
+- The format of date can be changed using SimpleDateFormat
+- It is used to convert Date -> String
+    SimpleDateFormat formats the date in different formats: 
+   "dd-MM-yyyy"
+   "dd/MM/yyyy HH:mm:ss"
+   "EEEE, MMMM dd, yyyy"
+   
+   In the  above,  
+   dd- 2 digits of the day eg: 31
+   MM- 2 digits of the Month: 01
+   yyyy- 4 digits of the year
+   HH - 2 digits of the hour eg: 12
+   mm- minutes
+   ss - seconds  
+   EEEE- full day name      eg: Tuesday
+   MMMM - full month name   eg: January
+   
+   parse() method in SimpleDateFormat is used to convert a date in String format
+   to Date object. 
+   It throws java.text.ParseException, which must either be handled using try..catch
+   or can be propogated using throws keyword. and STring to Date, 
+   This is called Parsing. 
+   
+   
+   LocalDate: 
+   LocalDate represents only the date 
+   We can add or remove the days by using methods like 
+   plusDays() and minusMonths();
+   
+   It is generally used for birthdays, holidays, and some deadlines
+   LocalDate class is immutable , 
+   Modifying a LocalDate object will create a new LocalDate object
+   
+   
+   
+   LocalTime: 
+   ----------
+   LocalTime represents only the time. 
+   It has methods:
+   now() , of(), plusHours(), minusMinutes()
+   It is generally for time of day operations like office closing time, opening time etc. 
+   
+   
+   LocalDateTime: 
+   - combines date+time
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+
+-  
